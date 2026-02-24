@@ -29,14 +29,18 @@
 <hr class="my-8 text-[#E6E7E9]">
 
     <main class="space-y-6">
+        <div class="flex justify-between">
+            <h2 class="text-xl font-semibold">Available Jobs</h2>
+            <p>8 jobs</p>
+        </div>
         <div class="flex gap-4 ">
-            <button class="bg-blue-400 text-white px-5 py-2 rounded-md " id="btn-all">All</button>
-            <button class="bg-white px-5 py-2 rounded-md  " id="btn-interview">Interview</button>
-            <button class="bg-white px-5 py-2  rounded-md " id="btn-rejected">Rejected</button>
+            <button onclick="toggleStyle('btn-all')" class="bg-blue-400 text-white px-5 py-2 rounded-md " id="btn-all">All</button>
+            <button onclick="toggleStyle('btn-interview')" class="bg-white px-5 py-2 rounded-md  " id="btn-interview">Interview</button>
+            <button onclick="toggleStyle('btn-rejected')" class="bg-white px-5 py-2  rounded-md " id="btn-rejected">Rejected</button>
             
         </div>
 
-        <section id="card-container" class="space-y-4">
+        <section id="allCards" class="space-y-4">
             <div class="card flex justify-between bg-white rounded-2xl p-6">
                 <div class="space-y-5"> 
                     <div>
@@ -217,5 +221,6 @@
         </section>
 
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
