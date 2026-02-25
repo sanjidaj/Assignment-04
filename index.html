@@ -10,7 +10,7 @@
 <body class="bg-sky-50 w-[80%] mx-auto">
     <header class="space-y-4">
         <h1 class="text-4xl font-bold pt-10">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid md:grid-cols-3 sm:grid-cols-1 gap-4">
           <div class="bg-white p-4 rounded-md">
              <p>Total</p>
              <p id="total">0</p>
@@ -30,11 +30,11 @@
     
 
     <main class="space-y-6">
-        <div class="flex justify-between">
+        <div class="flex justify-between ">
             <h2 class="text-xl font-semibold">Available Jobs</h2>
-            <p>8 jobs</p>
+            <p><span id="total-main-section">0</span> jobs</p>
         </div>
-        <div class="flex gap-4 ">
+        <div class="flex md:justify-start sm:justify-center gap-4 ">
             <button onclick="toggleStyle('btn-all')" class="bg-blue-400 text-white px-5 py-2 rounded-md " id="btn-all">All</button>
             <button onclick="toggleStyle('btn-interview')" class="bg-white px-5 py-2 rounded-md  " id="btn-interview">Interview</button>
             <button onclick="toggleStyle('btn-rejected')" class="bg-white px-5 py-2  rounded-md " id="btn-rejected">Rejected</button>
@@ -50,7 +50,7 @@
         </section>
 
         <section id="allCards" class="space-y-4">
-            <div class="card flex justify-between bg-white rounded-2xl p-6">
+            <div class="card flex justify-between  bg-white rounded-2xl p-6">
                 <div class="space-y-5"> 
                     <div>
                         <h2 class="company-name text-xl font-semibold">Mobile First Corp</h2>
@@ -63,7 +63,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -85,7 +85,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -107,7 +107,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -129,7 +129,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -151,7 +151,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -173,7 +173,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -195,7 +195,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>
@@ -217,7 +217,7 @@
                         <p class="status bg-blue-100 inline-block px-3 py-1 rounded-md font-semibold">NOT APPLIED</p>
                         <p class="notes text-[#64748B]">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
-                    <div class="flex gap-4">
+                    <div class="flex md:justify-start sm:justify-center gap-4">
                         <button class="interview-btn font-semibold text-green-500 border border-green-500 rounded-md px-4 py-2">Interview</button>
                         <button class="rejected-btn font-semibold text-red-500 border border-red-500 rounded-md px-4 py-2">Rejected</button>
                     </div>

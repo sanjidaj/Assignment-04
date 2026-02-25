@@ -7,6 +7,7 @@ let currentStatus = 'all'
 let total = document.getElementById('total');
 let interviewCount = document.getElementById('interviewCount');
 let rejectedCount = document.getElementById('rejectedCount');
+let totalMainSection =document.getElementById('total-main-section');
 
 const btnAll = document.getElementById('btn-all');
 const interviewBtn = document.getElementById('btn-interview');
@@ -22,7 +23,7 @@ function calculateCount(){
     total.innerText = allCardSection.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectedList.length;
-
+    totalMainSection.innerText = allCardSection.children.length;
 }
 calculateCount();
 
@@ -54,6 +55,8 @@ function toggleStyle(id){
             filterSection.classList.remove('hidden')
             renderInterview()
         }
+        totalMainSection.innerText = interviewList.length;
+
         
     }
     else if(id == 'btn-all'){
@@ -61,6 +64,7 @@ function toggleStyle(id){
         allCardSection.classList.remove('hidden')
         filterSection.classList.add('hidden')
         emptyPart.classList.add('hidden')
+        calculateCount();
 
     }
     else if(id == 'btn-rejected'){
@@ -75,6 +79,7 @@ function toggleStyle(id){
             filterSection.classList.remove('hidden')
             renderRejected()
         }
+        totalMainSection.innerText = rejectedList.length;
 
         
     }
@@ -110,12 +115,14 @@ mainContainer.addEventListener('click',function(event){
     if(!jobExists){
        interviewList.push(cardInfo)
     }
+
     rejectedList = rejectedList.filter(item => item.companyName !== cardInfo.companyName)
 
     if(currentStatus == 'btn-interview'){
         renderInterview();
+        
     }
-
+    
     calculateCount();
     // renderInterview()
    }
@@ -189,6 +196,11 @@ mainContainer.addEventListener('click',function(event){
 function renderInterview(){
     filterSection.innerHTML = '';
     for(let interview of interviewList){
+
+       
+        totalMainSection.innerText = interviewList.length;
+        
+        
         
         let div = document.createElement('div')
         
@@ -222,6 +234,8 @@ function renderInterview(){
 function renderRejected(){
     filterSection.innerHTML = '';
     for(let rejected of rejectedList){
+        
+        totalMainSection.innerText = rejectedList.length;
         
         let div = document.createElement('div')
         div.className = 'card flex justify-between bg-white rounded-2xl p-6';
